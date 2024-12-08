@@ -1,4 +1,4 @@
-# FULL_ADDER_SUBTRACTOR
+![Full subtractor EXP 4 (3)](https://github.com/user-attachments/assets/3389bbf0-423c-4627-9375-0592de7047fe)# FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -38,18 +38,94 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+FULL ADDER:
+
+
+![Full adder EXP 4 (3)](https://github.com/user-attachments/assets/a8fa1a11-bf57-449d-8e36-ddcef46bd61d)
+
+
+FULL SUBTRACTOR:
+
+
+![Full subtractor EXP 4 (3)](https://github.com/user-attachments/assets/6f6e3352-31be-4fc8-97b3-76c39a9e097a)
+
+
+
+
 **Procedure**
 
-Write the detailed procedure here
+```
+
+1) Type the program in Quartus software
+2) Compile and run the program
+3) Generate the RTL schematic and save the logic diagram
+4) Create nodes for inputs and outputs to generate the timing diagram
+5) For different inputs combinations generate the timing diagram
+
+```
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+
+FULL ADDER:
+
+module fa(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^cin);
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+endmodule
+
+FULL SUBTRACTOR:
+
+module fs(a,b,bin,difference,borrow);
+input a,b,bin;
+output difference,borrow;
+assign difference= ( (a ^ b)^bin);
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
+endmodule
+
+```
+
+```
+
+Developed by:MAGESH.S
+Register Number:24900241
+
+```
 
 **RTL Schematic**
 
+```
+FULL ADDER:
+
+```
+
+![Full adder EXP 4](https://github.com/user-attachments/assets/8a225dc4-7221-4fc3-bd03-79b4960c92b1)
+
+```
+FULL SUBTRACTOR:
+```
+
+![Full subtractor EXP 4](https://github.com/user-attachments/assets/51de4b6f-3e00-433d-a337-18a4f70280c2)
+
+
 **Output Timing Waveform**
+
+```
+FULL ADDER:
+```
+
+![Full adder EXP 4 (2)](https://github.com/user-attachments/assets/9c077610-ba39-4925-8eab-14c9558e99b1)
+
+
+```
+FULL SUBTRACTOR:
+```
+
+![Full subtractor EXP 4 (2)](https://github.com/user-attachments/assets/acf81ac8-1c93-44e4-8585-617a49e9a414)
+
 
 **Result:**
 
